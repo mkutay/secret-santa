@@ -1,25 +1,6 @@
-# KCL DnD Society App
+# Secret Santa 
 
-A comprehensive digital companion for the King's College London Dungeons & Dragons Society.
-This application serves as an organisational tool to enhance the users' experience, providing features
-for character management, party organization, campaign tracking, and achievement systems.
-
-**Important**: This is not a replacement for pen-and-paper play, but rather a magical addon
-that complements traditional D&D sessions at the university. Think of it as your party's
-trusted spellbook and chronicle keeper!
-
-## Project Overview
-
-The KCL DnD Society App is a Next.js-based web application designed to help everyone.
-It provides a centralised platform for:
-
-- **Character Management**: Create, edit, and track PCs
-- **Party Organisation**: Form and manage adventuring parties
-- **Campaign Tracking**: Monitor ongoing campaigns *(from humble tavern meetings to epic world-saving quests)*
-- **Achievement System**: Award and track achievements for both players, DMs, and PCs
-- **Journal Entries**: Document campaign sessions and important events *(the bards will thank you)*
-- **User Roles**: Differentiate between players, DMs, and administrators
-- **Images**: Upload and display character and party images *(because a picture is worth a thousand words)*
+Ortaokul bilgisayar ogrnc🇹🇷🍎👽
 
 ## Getting Started
 
@@ -39,8 +20,8 @@ It provides a centralised platform for:
 
 2. **Clone the repository**
    ```bash
-   git clone https://github.com/mkutay/dndsoc.git
-   cd dndsoc
+   git clone https://github.com/mkutay/secret-santa
+   cd secret-santa
    ```
 
 3. **Install dependencies**
@@ -56,9 +37,6 @@ It provides a centralised platform for:
 
    This starts up the Supabase local server with the migrations under
    `/supabase/migrations` and the data in `/supabase/seed.sql`.
-
-   You can sign in with three accounts to test the system out: `admin@kcl.ac.uk`, `player@kcl.ac.uk`,
-   and `dm@kcl.ac.uk`, with the password of `123456`. Obviously, this is just sample information and is not _real_.
 
 5. **Environment Variables**
 
@@ -123,33 +101,6 @@ The entire application uses the [Neverthrow](https://github.com/supermacro/never
 - **Form Validation**: Zod schemas for runtime type validation
 - **API Responses**: Strongly typed server actions and responses, using `ActionResult` type
 
-### Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages (the main quest hub)
-│   ├── (auth-pages)/    # Authentication flows (the tavern entrance)
-│   ├── achievements/    # Achievement system (your trophy room)
-│   ├── admin/           # Admin panel (the throne room)
-│   ├── campaigns/       # Campaign management (where epics are born)
-│   ├── characters/      # Character profiles (meet the heroes)
-│   ├── dms/             # Dungeon Master profiles (the storytellers)
-│   ├── journal/         # Session journals (the chronicler's records)
-│   ├── my/              # User dashboard (your personal sanctuary)
-│   ├── parties/         # Party management (assemble your fellowship)
-│   ├── players/         # Player profiles (the adventurers)
-│   └── polls/           # Polling system (democratic decisions)
-├── components/          # Reusable UI components (your spell components)
-│   ├── ui/              # Base UI primitives (the fundamental elements)
-│   ├── typography/      # Typography components (the scribes' tools)
-├── config/              # Configuration and schemas (the rule books)
-├── fonts/               # Custom D&D themed fonts (ancient scripts)
-├── lib/                 # Client-side database operations (your utility spells)
-├── server/              # Server actions and API logic (the server realm)
-├── types/               # TypeScript type definitions (the language of the code)
-└── utils/               # Utility functions and helpers (handy tools)
-```
-
 ## Contributing
 
 Contributions are welcome! Please be respectful and follow obvious design patterns.
@@ -167,18 +118,3 @@ bunx supabase gen types --lang typescript --local > src/types/database.types.ts
 After that, you are welcome to create a PR, where I'll review your changes.
 
 For more information about the Supabase migrations, [see](https://supabase.com/docs/guides/deployment/managing-environments).
-
----
-
-Built with <3 for the KCL DnD Society by [Kutay](https://www.mkutay.dev) and contributors.
-
-*May your code compile and your dice roll high!*
-
-<p align="center">
-  <img
-    src="/public/logo-light.png"
-    alt="DnD Society Logo Image"
-    width="20%"
-    height="auto"
-  >
-</p>

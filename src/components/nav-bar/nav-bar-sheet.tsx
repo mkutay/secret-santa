@@ -8,19 +8,12 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { Button } from "@/components/ui/button";
 import { TypographyHr } from "@/components/typography/blockquote";
 import { siteConfig } from "@/config/site";
-import { useAuth } from "@/hooks/use-auth";
 
 export function NavBarSheet() {
   const [open, setOpen] = useState(false);
-  const { isLoggedIn, signOut } = useAuth();
 
   const handleLinkClick = () => {
     setOpen(false);
-  };
-
-  const handleSignOut = async () => {
-    handleLinkClick();
-    await signOut();
   };
 
   return (
@@ -43,24 +36,6 @@ export function NavBarSheet() {
             </Button>
           ))}
           <TypographyHr />
-          {isLoggedIn ? (
-            <Button variant="secondary" type="submit" className="w-full cursor-pointer" onClick={handleSignOut}>
-              Sign out
-            </Button>
-          ) : (
-            <>
-              <Button asChild variant="secondary" className="w-full">
-                <Link href="/sign-in" onClick={handleLinkClick}>
-                  Sign In
-                </Link>
-              </Button>
-              <Button asChild variant="default" className="w-full">
-                <Link href="/sign-up" onClick={handleLinkClick}>
-                  Sign Up
-                </Link>
-              </Button>
-            </>
-          )}
         </div>
       </SheetContent>
     </Sheet>

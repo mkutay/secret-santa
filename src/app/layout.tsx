@@ -19,32 +19,26 @@ import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/utils/styling";
 import { env } from "@/env";
 import "@/app/globals.css";
+import { NavBar } from "@/components/nav-bar/nav-bar";
 
 const defaultUrl = env.NEXT_PUBLIC_SITE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
   title: {
-    template: "%s | KCL Dungeons and Dragons Society",
-    default: "King's College London Dungeons and Dragons Society",
+    template: "%s | Secret Santa",
+    default: "Secret Santa",
   },
-  description:
-    "Everything you need to play Dungeons and Dragons with us! Join our community, manage your characters, and embark on epic adventures.",
-  generator: "Next.js",
-  applicationName: "KCL DnD",
+  description: "Ortaokul bilgisayar ogrnc🇹🇷🍎👽",
   referrer: "origin-when-cross-origin",
-  authors: [{ name: "Kutay", url: "https://www.mkutay.dev" }, { name: "Kai" }],
-  creator: "Kutay",
-  publisher: "Kutay",
-  keywords: ["dnd", "dungeons and dragons", "kcl", "kings college london", "society", "role playing", "ttrpg"],
   openGraph: {
     title: {
-      template: "%s | KCL Dungeons and Dragons App",
-      default: "KCL Dungeons and Dragons App",
+      template: "%s | Secret Santa",
+      default: "Secret Santa",
     },
-    description: "Everything you need to play Dungeons and Dragons with us!",
+    description: "Ortaokul bilgisayar ogrnc🇹🇷🍎👽",
     url: new URL(defaultUrl),
-    siteName: "KCL DnD",
+    siteName: "Secret Santa",
     locale: "en_UK",
     type: "website",
     images: [`${defaultUrl}/logo-light.png`],
@@ -84,7 +78,7 @@ export default function RootLayout({
     >
       <head>
         <PlausibleProvider
-          domain="kcldnd.uk"
+          domain="ss.mkutay.dev"
           customDomain="https://pl.mkutay.dev"
           selfHosted={true}
           trackOutboundLinks={true}
@@ -94,7 +88,10 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <main className="min-h-screen flex flex-col">{children}</main>
+          <main className="min-h-screen flex flex-col">
+            <NavBar />
+            <div className="flex-1">{children}</div>
+          </main>
           <Toaster />
         </ThemeProvider>
       </body>

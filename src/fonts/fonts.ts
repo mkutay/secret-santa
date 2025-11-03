@@ -1,4 +1,11 @@
 import localFont from "next/font/local";
+import { Geist } from "next/font/google";
+
+export const GeistFont = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
 
 export const BookInsanity = localFont({
   src: [
