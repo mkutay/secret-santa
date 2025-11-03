@@ -5,9 +5,6 @@ import "katex/dist/katex.min.css";
 
 import {
   BookInsanity,
-  IBMPlexMono,
-  LibreBaskerville,
-  Lora,
   MrEaves,
   NodestoCapsCondensed,
   ScalySans,
@@ -62,9 +59,6 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        LibreBaskerville.variable,
-        Lora.variable,
-        IBMPlexMono.variable,
         BookInsanity.variable,
         MrEaves.variable,
         NodestoCapsCondensed.variable,
