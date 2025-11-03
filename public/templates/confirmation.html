@@ -1,0 +1,20 @@
+<html>
+<body>
+
+<h2>Confirm your sign up to DnD Soc!</h2>
+
+<p>Follow this link to confirm email address:</p>
+<p>
+  {{ if .Data.siteUrl }}
+  <a
+    href="{{ .Data.siteUrl }}/confirm/email-signup?token_hash={{ .TokenHash }}&type=email&next={{ .RedirectTo }}"
+  >Confirm your email</a>
+  {{ else }}
+  <a
+    href="{{ .SiteURL }}/confirm/email-signup?token_hash={{ .TokenHash }}&type=email&next={{ .RedirectTo }}"
+  >Confirm your email</a>
+  {{ end }}
+</p>
+
+</body>
+</html>
