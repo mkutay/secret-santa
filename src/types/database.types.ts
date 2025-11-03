@@ -38,41 +38,80 @@ export type Database = {
         Row: {
           code: string
           created_at: string
+          currency: string
           id: string
+          maximum: number
+          minimum: number
         }
         Insert: {
           code: string
           created_at?: string
+          currency?: string
           id?: string
+          maximum?: number
+          minimum?: number
         }
         Update: {
           code?: string
           created_at?: string
+          currency?: string
           id?: string
+          maximum?: number
+          minimum?: number
         }
         Relationships: []
       }
       submissions: {
         Row: {
+          address: string
+          city: string
           country: string
           created_at: string
+          data_processing_consent: boolean
+          delivery_instructions: string
+          do_not_send: string
+          i_wont_be_a_bitch: boolean
           id: string
           name: string
+          phone_number: string
           secret_santa_id: string
+          surname: string
+          willingness_for_high_shipping_fees: boolean
+          wish_list: string
         }
         Insert: {
+          address?: string
+          city: string
           country: string
           created_at?: string
+          data_processing_consent: boolean
+          delivery_instructions?: string
+          do_not_send?: string
+          i_wont_be_a_bitch: boolean
           id?: string
           name: string
+          phone_number: string
           secret_santa_id?: string
+          surname: string
+          willingness_for_high_shipping_fees: boolean
+          wish_list?: string
         }
         Update: {
+          address?: string
+          city?: string
           country?: string
           created_at?: string
+          data_processing_consent?: boolean
+          delivery_instructions?: string
+          do_not_send?: string
+          i_wont_be_a_bitch?: boolean
           id?: string
           name?: string
+          phone_number?: string
           secret_santa_id?: string
+          surname?: string
+          willingness_for_high_shipping_fees?: boolean
+          wish_list?: string
         }
         Relationships: [
           {
