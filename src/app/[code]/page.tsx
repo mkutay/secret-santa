@@ -7,7 +7,7 @@ import { ErrorPage } from "@/components/error-page";
 export default async function Home({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
 
-  const result = await runQuery((s) => s.from("secret_santas").select("*").eq("code", code).single());
+  const result = await runQuery((s) => s.from("secret_santas").select("*, submissions(*)").eq("code", code).single());
   if (result.isErr()) return <ErrorPage error={result.error} />;
   const santa = result.value;
 
@@ -20,6 +20,9 @@ export default async function Home({ params }: { params: Promise<{ code: string 
           {santa.minimum}
           {santa.currency}, maximum değeri {santa.maximum}
           {santa.currency} olmalıdır.
+        </TypographyParagraph>
+        <TypographyParagraph className="mb-8 max-w-2xl italic">
+          Bu etkinlik altında şu ana kadar toplam {santa.submissions.length} kişi katılmıştır.
         </TypographyParagraph>
         <SubmissionForm secretSantaId={santa.id} />
       </div>
