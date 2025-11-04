@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { TypographyH1 } from "@/components/typography/headings";
 import { TypographyParagraph } from "@/components/typography/paragraph";
 
@@ -11,7 +10,8 @@ export default async function Home() {
           Başvurunuz başarıyla alındı. En kısa sürede eşleştirme yapılıp size bilgi verilecektir. Katıldığınız için
           teşekkür ederiz!
         </TypographyParagraph>
-        <Image src="/cat.png" width="160" height="160" alt="cat" className="mx-auto mt-6" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/cat.png" width={160} height={160} alt="cat" className="mx-auto mt-6" />
       </div>
     </main>
   );

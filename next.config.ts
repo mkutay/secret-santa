@@ -13,17 +13,6 @@ const nextConfig: NextConfig = {
     globalNotFound: true,
     reactCompiler: true,
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "supa.kcldnd.uk",
-        pathname: "/**",
-      },
-    ],
-    loader: "custom",
-    loaderFile: "./loader.js",
-  },
 };
 
 export default nextConfig;
