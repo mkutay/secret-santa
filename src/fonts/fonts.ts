@@ -1,5 +1,26 @@
 import localFont from "next/font/local";
-import { Geist } from "next/font/google";
+import { Geist, Cinzel_Decorative, Libre_Baskerville, Shantell_Sans } from "next/font/google";
+
+export const CinzelDecorative = Cinzel_Decorative({
+  variable: "--font-cinzel-decorative",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const LibreBaskerville = Libre_Baskerville({
+  variable: "--font-libre-baskerville",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const ShantellSans = Shantell_Sans({
+  variable: "--font-shantell-sans",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const GeistFont = Geist({
   subsets: ["latin"],
@@ -187,28 +208,28 @@ export const Lora = localFont({
   weight: "400",
 });
 
-export const LibreBaskerville = localFont({
-  src: [
-    {
-      path: "./Libre_Baskerville/LibreBaskerville-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./Libre_Baskerville/LibreBaskerville-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./Libre_Baskerville/LibreBaskerville-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-  ],
-  variable: "--font-sans",
-  display: "swap",
-  weight: "400",
-});
+// export const LibreBaskerville = localFont({
+//   src: [
+//     {
+//       path: "./Libre_Baskerville/LibreBaskerville-Regular.ttf",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "./Libre_Baskerville/LibreBaskerville-Bold.ttf",
+//       weight: "700",
+//       style: "normal",
+//     },
+//     {
+//       path: "./Libre_Baskerville/LibreBaskerville-Italic.ttf",
+//       weight: "400",
+//       style: "italic",
+//     },
+//   ],
+//   variable: "--font-sans",
+//   display: "swap",
+//   weight: "400",
+// });
 
 export const IBMPlexMono = localFont({
   src: [

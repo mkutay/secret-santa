@@ -72,8 +72,8 @@
 
   --backdrop-blur-xs: 2px;
 
-  --font-body: var(--font-bookinsanity);
-  --font-headings: var(--font-mr-eaves);
+  --font-body: var(--font-libre-baskerville);
+  --font-headings: var(--font-cinzel-decorative);
   --font-book-card-titles: var(--font-nodesto-caps);
   --font-tables: var(--font-scaly-sans);
   --font-titles-of-tables: var(--font-scaly-sans-caps);

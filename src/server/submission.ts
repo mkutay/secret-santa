@@ -27,6 +27,7 @@ export const submission = async (values: z.infer<typeof createSubmissionSchema>)
             do_not_send: values.doNotSend,
             data_processing_consent: values.dataProcessingConsent,
             i_wont_be_a_bitch: values.IWontBeABitch,
+            password: values.password,
           })
           .select("*"),
       ),

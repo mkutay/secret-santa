@@ -11,6 +11,8 @@ import {
   ScalySansCaps,
   SolberaImitation,
   ZatannaMisdirection,
+  LibreBaskerville,
+  CinzelDecorative,
 } from "@/fonts/fonts";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/utils/styling";
@@ -66,6 +68,8 @@ export default function RootLayout({
         ScalySansCaps.variable,
         SolberaImitation.variable,
         ZatannaMisdirection.variable,
+        CinzelDecorative.variable,
+        LibreBaskerville.variable,
         "font-body",
       )}
       suppressHydrationWarning

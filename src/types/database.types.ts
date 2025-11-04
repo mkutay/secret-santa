@@ -73,6 +73,7 @@ export type Database = {
           i_wont_be_a_bitch: boolean
           id: string
           name: string
+          password: string
           phone_number: string
           secret_santa_id: string
           surname: string
@@ -90,6 +91,7 @@ export type Database = {
           i_wont_be_a_bitch: boolean
           id?: string
           name: string
+          password: string
           phone_number: string
           secret_santa_id?: string
           surname: string
@@ -107,6 +109,7 @@ export type Database = {
           i_wont_be_a_bitch?: boolean
           id?: string
           name?: string
+          password?: string
           phone_number?: string
           secret_santa_id?: string
           surname?: string

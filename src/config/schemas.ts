@@ -31,4 +31,5 @@ export const createSubmissionSchema = z.object({
   doNotSend: z.string().optional(),
   dataProcessingConsent: z.literal(true, "Veri işleme onayı gereklidir."),
   IWontBeABitch: z.literal(true, "Lütfen bu kutuyu işaretleyin."),
+  password: z.string().min(4, "Parola en az 4 karakter olmalıdır."),
 });

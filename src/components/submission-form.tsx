@@ -4,8 +4,9 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useTransition } from "react";
-
 import { Check, ChevronsUpDown } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 import { Textarea } from "./ui/textarea";
 import { Switch } from "./ui/switch";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -22,6 +23,7 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Command
 export const SubmissionForm = ({ secretSantaId }: { secretSantaId: string }) => {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const form = useForm<z.infer<typeof createSubmissionSchema>>({
     resolver: zodResolver(createSubmissionSchema),
@@ -36,6 +38,7 @@ export const SubmissionForm = ({ secretSantaId }: { secretSantaId: string }) => 
       deliveryInstructions: "",
       wishList: "",
       doNotSend: "",
+      password: "",
       willingnessForHighShippingFees: false,
     },
   });
@@ -49,7 +52,7 @@ export const SubmissionForm = ({ secretSantaId }: { secretSantaId: string }) => 
           toast({
             title: "Başarılı",
           });
-          form.reset();
+          router.push("/thank-you");
         },
         (error) =>
           toast({
@@ -293,6 +296,23 @@ export const SubmissionForm = ({ secretSantaId }: { secretSantaId: string }) => 
               </FormControl>
               <FormDescription>
                 Lütfen bu kutuyu işaretleyin. Etkinliğin keyfini çıkarmak ve pozitif bir ortam sağlamak için önemlidir.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="password"
+          disabled={isPending}
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Parola</FormLabel>
+              <FormControl>
+                <Input type="password" {...field} />
+              </FormControl>
+              <FormDescription>
+                İnsanların birbirinin hediyelerini görmesini engellemek için bir parola girin.
               </FormDescription>
               <FormMessage />
             </FormItem>
