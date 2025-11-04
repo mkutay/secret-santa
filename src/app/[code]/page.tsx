@@ -1,14 +1,14 @@
 import { SubmissionForm } from "@/components/submission-form";
-import { ErrorComponent } from "@/components/error-component";
 import { runQuery } from "@/utils/supabase-run";
 import { TypographyH1 } from "@/components/typography/headings";
 import { TypographyParagraph } from "@/components/typography/paragraph";
+import { ErrorPage } from "@/components/error-page";
 
 export default async function Home({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
 
   const result = await runQuery((s) => s.from("secret_santas").select("*").eq("code", code).single());
-  if (result.isErr()) return <ErrorComponent error={result.error} />;
+  if (result.isErr()) return <ErrorPage error={result.error} />;
   const santa = result.value;
 
   return (

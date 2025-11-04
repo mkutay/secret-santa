@@ -17,6 +17,10 @@ export const enterCodeSchema = z.object({
   code: z.string().min(1, "Kod gereklidir."),
 });
 
+export const doMatchingSchema = enterCodeSchema.extend({
+  seed: z.number().optional(),
+});
+
 export const seeMatchingSchema = enterCodeSchema.extend({
   password: z.string().min(4, "Parola en az 4 karakter olmalıdır."),
   name: z.string().min(1, "İsim gereklidir."),

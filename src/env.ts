@@ -8,6 +8,7 @@ export const env = createEnv({
     MODE: z.string().optional(),
     SUPABASE_ANON_KEY: z.string().min(1),
     SUPABASE_URL: z.url().default("http://127.0.0.1:54321"),
+    ADMIN_PASSWORD: z.string().optional(),
   },
 
   /**
@@ -33,6 +34,7 @@ export const env = createEnv({
     BUILDING: process.env.BUILDING,
     MODE: process.env.MODE,
     NEXT_PUBLIC_NODE_ENV: process.env.NODE_ENV,
+    ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   },
 
   /**
