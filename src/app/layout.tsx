@@ -13,6 +13,7 @@ import {
   ZatannaMisdirection,
   LibreBaskerville,
   CinzelDecorative,
+  ShantellSans,
 } from "@/fonts/fonts";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/utils/styling";
@@ -70,6 +71,7 @@ export default function RootLayout({
         ZatannaMisdirection.variable,
         CinzelDecorative.variable,
         LibreBaskerville.variable,
+        ShantellSans.variable,
         "font-body",
       )}
       suppressHydrationWarning

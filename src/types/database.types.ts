@@ -72,6 +72,7 @@ export type Database = {
           do_not_send: string
           i_wont_be_a_bitch: boolean
           id: string
+          matched_to: string | null
           name: string
           password: string
           phone_number: string
@@ -90,6 +91,7 @@ export type Database = {
           do_not_send?: string
           i_wont_be_a_bitch: boolean
           id?: string
+          matched_to?: string | null
           name: string
           password: string
           phone_number: string
@@ -108,6 +110,7 @@ export type Database = {
           do_not_send?: string
           i_wont_be_a_bitch?: boolean
           id?: string
+          matched_to?: string | null
           name?: string
           password?: string
           phone_number?: string
@@ -117,6 +120,13 @@ export type Database = {
           wish_list?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "submissions_matched_to_fkey"
+            columns: ["matched_to"]
+            isOneToOne: true
+            referencedRelation: "submissions"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "submissions_secret_santa_id_fkey"
             columns: ["secret_santa_id"]

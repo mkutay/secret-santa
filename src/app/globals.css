@@ -74,11 +74,16 @@
 
   --font-body: var(--font-libre-baskerville);
   --font-headings: var(--font-cinzel-decorative);
-  --font-book-card-titles: var(--font-nodesto-caps);
+  /* --font-book-card-titles: var(--font-nodesto-caps);
   --font-tables: var(--font-scaly-sans);
   --font-titles-of-tables: var(--font-scaly-sans-caps);
   --font-drop-caps: var(--font-solbera-imitation);
-  --font-quotes: var(--font-zatanna-misdirection);
+  --font-quotes: var(--font-zatanna-misdirection); */
+  --font-book-card-titles: var(--font-cinzel-decorative);
+  --font-tables: var(--font-cinzel-decorative);
+  --font-titles-of-tables: var(--font-cinzel-decorative);
+  --font-drop-caps: var(--font-cinzel-decorative);
+  --font-quotes: var(--font-shantell-sans);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);

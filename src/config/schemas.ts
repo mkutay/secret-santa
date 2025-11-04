@@ -17,6 +17,11 @@ export const enterCodeSchema = z.object({
   code: z.string().min(1, "Kod gereklidir."),
 });
 
+export const seeMatchingSchema = enterCodeSchema.extend({
+  password: z.string().min(4, "Parola en az 4 karakter olmalıdır."),
+  name: z.string().min(1, "İsim gereklidir."),
+});
+
 export const createSubmissionSchema = z.object({
   secretSantaId: z.string().min(1, "Secret Santa kimliği gereklidir."),
   name: z.string().min(1, "İsim gereklidir."),

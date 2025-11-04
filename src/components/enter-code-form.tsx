@@ -49,7 +49,7 @@ export const EnterCodeForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 px-1">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 max-w-md">
         <FormField
           control={form.control}
           name="code"
